@@ -1,18 +1,13 @@
+import string
 
-
-my_string = input(" ")
-no_punct = ""
-for char in my_string:
-    if char not in punctuations:
-        no_punc = no_punc + char
-
-
+my_string = input("Enter a word, sentence or list of numbers. ").lower()
 my_string = my_string.replace(' ' , '')
-my_string = my_string.lower()
 
-
+for item in string.punctuation:
+    my_string = my_string.replace(item, "")
 
 if my_string == my_string[::-1]:
         print(" {} is a palindrome!".format (my_string))
 else:
         print(" {} is not a palindrome!".format(my_string))
+P
